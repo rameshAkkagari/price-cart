@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Cards</title>
+    <link rel="stylesheet" href="text.css">
+</head>
+<body> 
+    <div class="header-container">
+        <div class="horizontal-line"></div>
+        <h1>Bundle & Save</h1>
+        <div class="horizontal-line"></div>
+      </div>
+    <div class="card" onclick="toggleCard(this)">
+        <div class="item">
+            <div class="details">
+                <input type="checkbox" class="card-checkbox">
+                <div class="price">
+                    <p>1 pair</p>
+                    <h3>DKK 195.00</h3>
+                </div>
+            </div>
+            <h4>50% OFF</h4>
+        </div>
+        <div class="selection">
+            <div>
+                <p>Size</p>
+                #1
+                <select>
+                    <option value="S">S</option>
+                    <option value="S">M</option>
+                    <option value="S">L</option>
+                </select>
+            </div>
+            <div>
+                <p>Color</p>
+                <select>
+                    <option value="Red">RED</option>
+                    <option value="Yellow">YELLOW</option>
+                    <option value="GREEN">GREEN</option>
+                </select>
+            </div>
+        </div>
+        <div class="selection">
+            <div>
+                #2
+                <select>
+                    <option value="S">S</option>
+                    <option value="S">M</option>
+                    <option value="S">L</option>
+                </select>
+            </div>
+            <div>
+                <select>
+                    <option value="Red">RED</option>
+                    <option value="Yellow">YELLOW</option>
+                    <option value="GREEN">GREEN</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleCard(this)">
+        <div class="item">
+            <div class="details">
+                <input type="checkbox" class="card-checkbox">
+                <div class="price">
+                    <p>1 pair</p>
+                    <h3>DKK 195.00</h3>
+                </div>
+            </div>
+            <div class="fast-sell">
+                <p>Most Popular</p>
+                <h4>40% OFF</h4>
+            </div>
+        </div>
+        <div class="selection">
+            <div>
+                <p>Size</p>
+                #1
+                <select>
+                    <option value="S">S</option>
+                    <option value="S">M</option>
+                    <option value="S">L</option>
+                </select>
+            </div>
+            <div>
+                <p>Color</p>
+                <select>
+                    <option value="Red">RED</option>
+                    <option value="Yellow">YELLOW</option>
+                    <option value="GREEN">GREEN</option>
+                </select>
+            </div>
+        </div>
+        <div class="selection">
+            <div>
+                #2
+                <select>
+                    <option value="S">S</option>
+                    <option value="S">M</option>
+                    <option value="S">L</option>
+                </select>
+            </div>
+            <div>
+                <select>
+                    <option value="Red">RED</option>
+                    <option value="Yellow">YELLOW</option>
+                    <option value="GREEN">GREEN</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="toggleCard(this)">
+        <div class="item">
+            <div class="details">
+                <input type="checkbox" class="card-checkbox">
+                <div class="price">
+                    <p>1 pair</p>
+                    <h3>DKK 195.00</h3>
+                </div>
+            </div>
+            <h4>60% OFF</h4>
+        </div>
+        <div class="selection">
+            <div>
+                <p>Size</p>
+                #1
+                <select>
+                    <option value="S">S</option>
+                    <option value="S">M</option>
+                    <option value="S">L</option>
+                </select>
+            </div>
+            <div>
+                <p>Color</p>
+                <select>
+                    <option value="Red">RED</option>
+                    <option value="Yellow">YELLOW</option>
+                    <option value="GREEN">GREEN</option>
+                </select>
+            </div>
+        </div>
+        <div class="selection">
+            <div>
+                #2
+                <select>
+                    <option value="S">S</option>
+                    <option value="S">M</option>
+                    <option value="S">L</option>
+                </select>
+            </div>
+            <div>
+                <select>
+                    <option value="Red">RED</option>
+                    <option value="Yellow">YELLOW</option>
+                    <option value="GREEN">GREEN</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="payment">
+        <p>Free 2 days shipping</p>
+        <p>Total :<span>DKK 360.00</span></p>
+    </div>
+    <button> + Add to Cart</button>
+    
+    <script>
+        function toggleCard(selectedCard) {
+            document.querySelectorAll('.card').forEach(card => {
+                let checkbox = card.querySelector(".card-checkbox");
+                if (card === selectedCard) {
+                    card.classList.toggle('active');
+                    checkbox.checked = card.classList.contains('active'); 
+                } else {
+                    card.classList.remove('active');
+                    card.querySelector(".card-checkbox").checked = false;
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>
+
